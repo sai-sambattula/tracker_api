@@ -5,6 +5,8 @@ import { generateAccesToken, generateRefreshToken, verifyRefreshToken } from "..
 
 // ===== AUTH =====
 export const signupCtrl = async (req, res) => {
+  console.log("test");
+  
   try {
     const { name, phone, password } = req.body;
     if (!name || !phone || !password) {

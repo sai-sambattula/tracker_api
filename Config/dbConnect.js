@@ -17,5 +17,5 @@ const MysqlConnection = mysql.createPool({
         minVersion: 'TLSv1.2'
     }
 });
-d
+
 export default MysqlConnection;
