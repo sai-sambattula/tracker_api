@@ -3,6 +3,6 @@ import TrackerRoutes from "./routes/trackerRoutes.js";
 
 const indexappRouter = express();
 
-indexappRouter.use("/",TrackerRoutes);
+indexappRouter.use("/n",TrackerRoutes);
 
 export default indexappRouter;
