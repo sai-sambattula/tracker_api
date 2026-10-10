@@ -5,7 +5,7 @@ import { env } from '../Config/config.js';
 
 export function generateAccesToken(data) {
     const accessToken = jsonwebtoken.sign(data, env.accessTokenSecret, {
-        expiresIn: '15m'
+        expiresIn: '7d'
     })
 
     return accessToken;
