@@ -50,12 +50,14 @@ app.use(bodyParser.urlencoded({
 // ---------------- STATIC ----------------
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// ---------------- ROUTES ----------------
-app.use('/appapi', indexappRouter);
 
 app.get('/appapi', (req, res) => {
     res.send('Server is Working...');
 });
+// ---------------- ROUTES ----------------
+app.use('/appapi', indexappRouter);
+
+
 
 
 app.listen(PORT, () => {

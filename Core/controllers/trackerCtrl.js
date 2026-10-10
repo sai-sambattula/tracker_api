@@ -30,10 +30,13 @@ export const signupCtrl = async (req, res) => {
 
 export const loginCtrl = async (req, res) => {
   try {
+    console.log("ssss");
+    
     const { phone, password } = req.body;
     if (!phone || !password) return res.status(400).json({ success: false, message: "Phone and password required" });
 
     const user = await trackerMdl.findUserByPhoneMdl(phone);
+  
     if (!user) return res.status(401).json({ success: false, message: "Invalid phone or password" });
 
     const match = await bcrypt.compare(password, user.password_hash);
